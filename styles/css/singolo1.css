@@ -38,10 +38,50 @@ a {
 }
 
 .container {
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 95px 1fr 100px;
   width: 1020px;
   height: 100%;
   margin: auto;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 95px 1fr 100px;
+}
+
+.header {
+  padding: 32px 40px;
+  font-family: "Lato Bold";
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #2d303a;
+}
+
+.header-logo {
+  float: left;
+  font-size: 25px;
+  line-height: 1;
+  letter-spacing: -0.5px;
+}
+
+.header-logo-star {
+  color: #f06c64;
+}
+
+.header-navigation {
+  float: right;
+  padding: 10px 0;
+  display: flex;
+  justify-content: end;
+  font-size: 12px;
+}
+
+.header-navigation-item {
+  margin-left: 28px;
+  color: inherit;
+}
+
+.header-navigation-item:hover {
+  color: #f06c64;
+}
+
+.header-navigation .active {
+  color: #f06c64;
 }

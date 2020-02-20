@@ -38,10 +38,57 @@ a {
 }
 
 .container {
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 95px 1fr 100px;
   width: 1020px;
   height: 100%;
   margin: auto;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 95px 1fr 100px;
+}
+
+.header {
+  padding: 32px 40px;
+  font-family: "Lato Bold";
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #2d303a;
+
+  // &::after{
+  //   clear: both;
+  // }
+
+  &-logo {
+    float: left;
+    font-size: 25px;
+    line-height: 1;
+    letter-spacing: -0.5px;
+
+    &-star {
+      color: #f06c64;
+    }
+  }
+
+  &-navigation {
+    float: right;
+    // width: 371px;
+    padding: 10px 0;
+    display: flex;
+    justify-content: end;
+    // justify-content: space-between;
+    font-size: 12px;
+    // display: block;
+
+    &-item {
+      margin-left: 28px;
+      color: inherit;
+
+      &:hover {
+        color: #f06c64;
+      }
+    }
+
+    .active {
+      color: #f06c64;
+    }
+  }
 }
