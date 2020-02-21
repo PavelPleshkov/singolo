@@ -90,6 +90,11 @@ a {
   color: #f06c64;
 }
 
+.header-navigation-item:active {
+  transform: scale(1);
+  transition: 0s;
+}
+
 .header-navigation .active {
   color: #f06c64;
 }
@@ -104,10 +109,14 @@ a {
   background-color: #f06c64;
 }
 
+.main .slider > h3 {
+  display: none;
+}
+
 .main .slider-arrow {
   position: relative;
   height: 100%;
-  display: block;
+  display: inline-block;
   font-size: 27px;
   line-height: 1;
   color: #ca4549;
@@ -128,12 +137,21 @@ a {
   right: 38px;
 }
 
-.main .slider-arrow:hover {
-  background-color: #ca4549;
+.main .slider-arrow-left:hover {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.4) 0%, transparent 100%);
+}
+
+.main .slider-arrow-right:hover {
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.4) 0%, rgba(99, 88, 88, 0) 100%);
+  transition: 0.3s;
 }
 
 .main .slider-arrow:hover .slider-arrow-pic {
   color: #ffffff;
+}
+
+.main .slider-arrow:active .slider-arrow-pic {
+  transform: scale(0.9);
 }
 
 .main .slider-phone {

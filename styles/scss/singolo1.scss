@@ -96,6 +96,11 @@ a {
         filter: drop-shadow(0 0 15px #ffffff);
         color: #f06c64;
       }
+
+      &:active {
+        transform: scale(1);
+        transition: 0s;
+      }
     }
 
     .active {
@@ -115,11 +120,14 @@ a {
     box-sizing: border-box;
     background-color: #f06c64;
     
+    &>h3 {
+      display: none;
+    }
 
     &-arrow {
       position: relative;
       height: 100%;
-      display: block;
+      display: inline-block;
       font-size: 27px;
       line-height: 1;
       color: #ca4549;
@@ -139,11 +147,26 @@ a {
         }
       }
 
+      &-left:hover {
+        background: linear-gradient(to right, rgba(0,0,0,0.4) 0%,rgba(0,0,0,0) 100%);
+      }
+
+      &-right:hover {
+        background: linear-gradient(to left, rgba(0,0,0,0.4) 0%,rgba(99, 88, 88, 0) 100%);
+        transition: 0.3s;
+      }
+
       &:hover {
-        background-color: #ca4549;
 
         .slider-arrow-pic {
           color: #ffffff;
+        }
+      }
+
+      &:active {
+
+        .slider-arrow-pic {
+          transform: scale(0.9);
         }
       }
     }
