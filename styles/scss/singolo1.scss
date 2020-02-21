@@ -166,6 +166,12 @@ a {
         margin: 22px 0;
         background-image: url("../../assets/images/phone.png");
 
+        &:hover {
+          .slider-phone-vertical-bcg {
+            background-position: 50% 50%;
+          }
+        }
+
         &-bcg {
           position: absolute;
           top: 66px;
@@ -176,6 +182,7 @@ a {
           background-image: url("../../assets/images/vertical-phone-bcg.png");
           background-repeat: no-repeat;
           background-position: -15px -135px;
+          transition: 0.5s;
         }
 
         &-shadow {
@@ -201,6 +208,12 @@ a {
         transform-origin: 0 50%;
         background-image: url("../../assets/images/phone.png");
 
+        &:hover {
+          .slider-phone-horizontal-bcg {
+            background-position: 50% 50%;
+          }
+        }
+
         &-bcg {
           position: absolute;
           top: 138px;
@@ -212,6 +225,7 @@ a {
           background-repeat: no-repeat;
           background-position: -125px -119px;
           transform: rotate(-90deg);
+          transition: 0.5s;
         }
 
         &-shadow {

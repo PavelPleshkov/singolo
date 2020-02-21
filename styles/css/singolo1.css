@@ -156,6 +156,10 @@ a {
   background-image: url("../../assets/images/phone.png");
 }
 
+.main .slider-phone-vertical:hover .slider-phone-vertical-bcg {
+  background-position: 50% 50%;
+}
+
 .main .slider-phone-vertical-bcg {
   position: absolute;
   top: 66px;
@@ -166,6 +170,7 @@ a {
   background-image: url("../../assets/images/vertical-phone-bcg.png");
   background-repeat: no-repeat;
   background-position: -15px -135px;
+  transition: 0.5s;
 }
 
 .main .slider-phone-vertical-shadow {
@@ -191,6 +196,10 @@ a {
   background-image: url("../../assets/images/phone.png");
 }
 
+.main .slider-phone-horizontal:hover .slider-phone-horizontal-bcg {
+  background-position: 50% 50%;
+}
+
 .main .slider-phone-horizontal-bcg {
   position: absolute;
   top: 138px;
@@ -202,6 +211,7 @@ a {
   background-repeat: no-repeat;
   background-position: -125px -119px;
   transform: rotate(-90deg);
+  transition: 0.5s;
 }
 
 .main .slider-phone-horizontal-shadow {
