@@ -43,7 +43,7 @@ a {
   margin: auto;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 95px 1fr 100px;
+  grid-template-rows: 95px 1fr;
 }
 
 .header {
@@ -51,7 +51,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-family: "Lato Bold";
+  font-family: "Lato Bold", sans-serif;
   text-transform: uppercase;
   color: #ffffff;
   background-color: #2d303a;
@@ -239,6 +239,81 @@ a {
           background-repeat: no-repeat;
         }
       }
+    }
+  }
+
+  .services {
+    padding: 68px 40px;
+
+    &-title {
+      padding-bottom: 14px;
+      font-family: "Lato Black", sans-serif;
+      font-size: 30px;
+      line-height: 19px;
+      color: #666d89;
+    }
+
+    &-info {
+      padding: 15px 0 48px;
+      font-size: 18px;
+      line-height: 28px;
+      color: #767e9e;
+      font-family: "Lato Light", sans-serif;
+    }
+
+    &-items {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-column-gap: 20px;
+      grid-row-gap: 33px;
+    }
+
+    &-item {
+      height: 90px;
+      padding-left: 80px;
+      background-repeat: no-repeat;
+      overflow: hidden;
+
+      &-title {
+        padding-bottom: 10px;
+        font-size: 18px;
+        line-height: 16px;
+        color: #666d89;
+        font-family: "Lato Black";
+        letter-spacing: -0.1px;
+      }
+
+      &-info {
+        font-size: 12px;
+        line-height: 22px;
+        color: #767e9e;
+        font-family: "Lato Regular", sans-serif;
+        text-align: justify;
+      }
+    }
+
+    .pen {
+      background-image: url("../../assets/images/service-pen.png");
+    }
+
+    .bulb {
+      background-image: url("../../assets/images/service-bulb.png");
+    }
+
+    .heart {
+      background-image: url("../../assets/images/service-heart.png");
+    }
+
+    .phone {
+      background-image: url("../../assets/images/service-phone.png");
+    }
+
+    .message {
+      background-image: url("../../assets/images/service-message.png");
+    }
+
+    .star {
+      background-image: url("../../assets/images/service-star.png");
     }
   }
 }
