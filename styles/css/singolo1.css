@@ -47,7 +47,10 @@ a {
 }
 
 .header {
-  padding: 32px 40px;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   font-family: "Lato Bold";
   text-transform: uppercase;
   color: #ffffff;
@@ -55,7 +58,8 @@ a {
 }
 
 .header-logo {
-  float: left;
+  position: relative;
+  top: -2px;
   font-size: 25px;
   line-height: 1;
   letter-spacing: -0.5px;
@@ -66,8 +70,8 @@ a {
 }
 
 .header-navigation {
-  float: right;
-  padding: 10px 0;
+  position: relative;
+  top: 1px;
   display: flex;
   justify-content: end;
   font-size: 12px;
@@ -75,13 +79,138 @@ a {
 
 .header-navigation-item {
   margin-left: 28px;
+  padding: 18px 0;
   color: inherit;
+  transition: 0.3s;
 }
 
 .header-navigation-item:hover {
+  transform: scale(1.15);
+  filter: drop-shadow(0 0 15px #ffffff);
   color: #f06c64;
 }
 
 .header-navigation .active {
   color: #f06c64;
+}
+
+.main .slider {
+  height: 600px;
+  display: grid;
+  grid-template-columns: 100px 1fr 100px;
+  grid-template-rows: 600px;
+  border-bottom: 15px solid #ea676b;
+  box-sizing: border-box;
+  background-color: #f06c64;
+}
+
+.main .slider-arrow {
+  position: relative;
+  height: 100%;
+  display: block;
+  font-size: 27px;
+  line-height: 1;
+  color: #ca4549;
+  transition: 0.3s;
+}
+
+.main .slider-arrow-pic {
+  position: absolute;
+  top: 282px;
+  display: block;
+}
+
+.main .slider-arrow-pic-left {
+  left: 40px;
+}
+
+.main .slider-arrow-pic-right {
+  right: 38px;
+}
+
+.main .slider-arrow:hover {
+  background-color: #ca4549;
+}
+
+.main .slider-arrow:hover .slider-arrow-pic {
+  color: #ffffff;
+}
+
+.main .slider-phone {
+  padding: 30px 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main .slider-phone-wrapper {
+  position: relative;
+}
+
+.main .slider-phone-vertical {
+  position: relative;
+  left: -1px;
+  z-index: 1;
+  width: 218px;
+  height: 461px;
+  margin: 22px 0;
+  background-image: url("../../assets/images/phone.png");
+}
+
+.main .slider-phone-vertical-bcg {
+  position: absolute;
+  top: 66px;
+  left: 16px;
+  width: 189px;
+  height: 333px;
+  border-radius: 1px;
+  background-image: url("../../assets/images/vertical-phone-bcg.png");
+  background-repeat: no-repeat;
+  background-position: -15px -135px;
+}
+
+.main .slider-phone-vertical-shadow {
+  position: absolute;
+  left: 1px;
+  top: 24px;
+  width: 240px;
+  height: 483px;
+  transform: rotate(180deg);
+  background-image: url("../../assets/images/vertical-phone-shadow.png");
+  background-repeat: no-repeat;
+}
+
+.main .slider-phone-horizontal {
+  position: relative;
+  top: -88px;
+  left: -36px;
+  z-index: 1;
+  width: 218px;
+  height: 461px;
+  transform: rotate(90deg);
+  transform-origin: 0 50%;
+  background-image: url("../../assets/images/phone.png");
+}
+
+.main .slider-phone-horizontal-bcg {
+  position: absolute;
+  top: 138px;
+  left: -56px;
+  width: 333px;
+  height: 189px;
+  border-radius: 1px;
+  background-image: url("../../assets/images/horizontal-phone-bcg.png");
+  background-repeat: no-repeat;
+  background-position: -125px -119px;
+  transform: rotate(-90deg);
+}
+
+.main .slider-phone-horizontal-shadow {
+  position: absolute;
+  left: -264px;
+  top: 144px;
+  width: 483px;
+  height: 240px;
+  transform: rotate(180deg);
+  background-image: url("../../assets/images/horizontal-phone-shadow.png");
+  background-repeat: no-repeat;
 }
