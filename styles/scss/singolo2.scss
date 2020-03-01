@@ -341,5 +341,16 @@ a {
     }
   }
 
-  
+  .portfolio {
+    padding: 68px 40px 70px;
+    background-color: #2d303a;
+
+    &-title {
+      padding-bottom: 14px;
+      font-size: 30px;
+      line-height: 19px;
+      color: #666d89;
+      font-family: "Lato Black", sans-serif;
+    }
+  }
 }

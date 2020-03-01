@@ -318,3 +318,16 @@ a {
 .main .services .star {
   background-image: url("../../assets/images/service-star.png");
 }
+
+.main .portfolio {
+  padding: 68px 40px 70px;
+  background-color: #2d303a;
+}
+
+.main .portfolio-title {
+  padding-bottom: 14px;
+  font-size: 30px;
+  line-height: 19px;
+  color: #666d89;
+  font-family: "Lato Black", sans-serif;
+}
