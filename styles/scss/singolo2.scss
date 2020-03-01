@@ -514,17 +514,19 @@ a {
 
       &-image {
         display: block;
-        width: 303px;
-        height: 303px;
+        // width: 301px;
+        // height: 301px;
       }
 
       &-name {
-        padding: 15px 0 10px;
+        height: 18px;
+        padding: 12px 0 14px;
         font-size: 18px;
-        line-height: 18px;
+        line-height: 27px;
         color: #666d89;
         font-family: "Lato Black", sans-serif;
         letter-spacing: -0.3px;
+        overflow: hidden;
       }
 
       &-info {
@@ -542,7 +544,7 @@ a {
       &-link {
         width: 32px;
         height: 32px;
-        padding: 6px 0;
+        padding: 7px 0;
         margin-right: 5px;
         box-sizing: border-box;
         display: inline-block;
