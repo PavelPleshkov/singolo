@@ -378,6 +378,12 @@ a {
         letter-spacing: -0.2px;
         border: 1px solid #666d89;
         border-radius: 5px;
+        
+        &:hover {
+          color: #ffffff;
+          border-color: #ffffff;
+          filter: drop-shadow(0 0 15px #ffffff);
+        }
 
         &:last-child {
           padding: 0 6px;
@@ -394,15 +400,22 @@ a {
       display: grid;
       grid-template-columns: repeat(4, 221px);
       // grid-template-columns: repeat(4, 1fr);
-      // grid-template-rows: repeat(3, 188px);
+      grid-template-rows: repeat(3, 188px);
       grid-gap: 19px;
       height: 602px;
-      overflow: hidden;
+      // overflow: hidden;
     }
 
     &-item {
       width: 100%;
-      height: 187px;
+      // height: 188px;
+      display: block;
+      transition: 0.2s;
+
+      &:hover {
+        transform: scale(1.05);
+        filter: drop-shadow(0 0 15px #000000);
+      }
     }
 
     &-item1 {
@@ -468,7 +481,8 @@ a {
   }
 
   .about {
-    padding: 69px 40px;
+    padding: 69px 40px 66px;
+    border-bottom: 7px solid #ffffff;
     background-color: #f2f2f2;
 
     &-title {
@@ -500,10 +514,12 @@ a {
 
       &-image {
         display: block;
+        width: 303px;
+        height: 303px;
       }
 
       &-name {
-        padding: 16px 0 10px;
+        padding: 15px 0 10px;
         font-size: 18px;
         line-height: 18px;
         color: #666d89;
@@ -526,14 +542,20 @@ a {
       &-link {
         width: 32px;
         height: 32px;
-        padding: 8px 0;
+        padding: 6px 0;
         margin-right: 5px;
         box-sizing: border-box;
+        display: inline-block;
         line-height: 16px;
         color: #666d89;
         text-align: center;
         border: 1px solid #666d89;
         border-radius: 50%;
+
+        &:hover {
+          color: #000000;
+          border-color: #000000;
+        }
       }
     }
   }
