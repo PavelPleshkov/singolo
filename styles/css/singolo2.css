@@ -331,3 +331,37 @@ a {
   color: #666d89;
   font-family: "Lato Black", sans-serif;
 }
+
+.main .portfolio-text {
+  padding: 14px 0 10px;
+  font-size: 18px;
+  line-height: 30px;
+  color: #767e9e;
+  font-family: "Lato Light", sans-serif;
+}
+
+.main .portfolio-categories {
+  padding-bottom: 7px;
+}
+
+.main .portfolio-categories-item {
+  padding: 0 7px;
+  margin-right: 7px;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 22px;
+  color: #767e9e;
+  font-family: "Lato Regular", sans-serif;
+  letter-spacing: -0.2px;
+  border: 1px solid #666d89;
+  border-radius: 5px;
+}
+
+.main .portfolio-categories-item:last-child {
+  padding: 0 6px;
+}
+
+.main .portfolio-categories-item .active {
+  color: #dedede;
+  border-color: #c5c5c5;
+}
