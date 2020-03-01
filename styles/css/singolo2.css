@@ -441,3 +441,73 @@ a {
   background-image: url("../../assets/images/portfolio-image12.png");
   background-position: -36px -60px;
 }
+
+.main .about {
+  padding: 69px 40px;
+  background-color: #f2f2f2;
+}
+
+.main .about-title {
+  padding-bottom: 14px;
+  font-size: 30px;
+  line-height: 18px;
+  color: #666d89;
+  font-family: "Lato Black", sans-serif;
+  letter-spacing: -0.2px;
+}
+
+.main .about-text {
+  padding: 12px 0 46px;
+  font-size: 18px;
+  line-height: 30px;
+  color: #767e9e;
+  font-family: "Lato Light", sans-serif;
+}
+
+.main .about-persons {
+  display: grid;
+  grid-template-columns: repeat(3, 301px);
+  grid-gap: 19px;
+}
+
+.main .about-person {
+  overflow: hidden;
+}
+
+.main .about-person-image {
+  display: block;
+}
+
+.main .about-person-name {
+  padding: 16px 0 10px;
+  font-size: 18px;
+  line-height: 18px;
+  color: #666d89;
+  font-family: "Lato Black", sans-serif;
+  letter-spacing: -0.3px;
+}
+
+.main .about-person-info {
+  padding-bottom: 15px;
+  font-size: 12px;
+  line-height: 22px;
+  color: #767e9e;
+  font-family: "Lato Regular", sans-serif;
+}
+
+.main .about-person-links {
+  padding-top: 8px;
+}
+
+.main .about-person-link {
+  width: 32px;
+  height: 32px;
+  padding: 8px 0;
+  margin-right: 5px;
+  box-sizing: border-box;
+  line-height: 16px;
+  color: #666d89;
+  text-align: center;
+  border: 1px solid #666d89;
+  border-radius: 50%;
+}
