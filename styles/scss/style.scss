@@ -1,0 +1,343 @@
+@font-face {
+  font-family: "Lato Light";
+  src: url("../../assets/fonts/Lato-300-Light.ttf")
+}
+
+@font-face {
+  font-family: "Lato Regular";
+  src: url("../../assets/fonts/Lato-400-Regular.ttf")
+}
+
+@font-face {
+  font-family: "Lato Bold";
+  src: url("../../assets/fonts/Lato-700-Bold.ttf")
+}
+
+@font-face {
+  font-family: "Lato Black";
+  src: url("../../assets/fonts/Lato-900-Black.ttf")
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Lato Regular", sans-serif;
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 1020px;
+  height: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 95px 1fr;
+}
+
+.header {
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Lato Bold", sans-serif;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #2d303a;
+
+  // &::after{
+  //   clear: both;
+  // }
+
+  &-logo {
+    // float: left;
+    position: relative;
+    top: -2px;
+    font-size: 25px;
+    line-height: 1;
+    letter-spacing: -0.5px;
+
+    &-star {
+      color: #f06c64;
+    }
+  }
+
+  &-navigation {
+    // float: right;
+    // width: 371px;
+    // padding: 10px 0;
+    position: relative;
+    top: 1px;
+    display: flex;
+    justify-content: end;
+    // justify-content: space-between;
+    font-size: 12px;
+    // display: block;
+
+    &-item {
+      margin-left: 30px;
+      padding: 18px 0;
+      color: inherit;
+      transition: 0.3s;
+      letter-spacing: -0.2px;
+
+      &:hover {
+        transform: scale(1.15);
+        filter: drop-shadow(0 0 15px #ffffff);
+        color: #f06c64;
+      }
+
+      &:active {
+        transform: scale(1);
+        transition: 0s;
+      }
+    }
+
+    .active {
+      color: #f06c64;
+    }
+  }
+}
+
+.main {
+
+  .slider {
+    height: 600px;
+    display: grid;
+    grid-template-columns: 100px 1fr 100px;
+    grid-template-rows: 600px;
+    border-bottom: 15px solid #ea676b;
+    box-sizing: border-box;
+    background-color: #f06c64;
+    
+    &>h3 {
+      display: none;
+    }
+
+    &-arrow {
+      position: relative;
+      height: 100%;
+      display: inline-block;
+      font-size: 27px;
+      line-height: 1;
+      color: #ca4549;
+      transition: 0.3s;
+
+      &-pic {
+        position: absolute;
+        top: 282px;
+        display: block;
+
+        &-left {
+          left: 40px;
+        }
+
+        &-right {
+          right: 38px;
+        }
+      }
+
+      &-left:hover {
+        background: linear-gradient(to right, rgba(0,0,0,0.4) 0%,rgba(0,0,0,0) 100%);
+      }
+
+      &-right:hover {
+        background: linear-gradient(to left, rgba(0,0,0,0.4) 0%,rgba(99, 88, 88, 0) 100%);
+        transition: 0.3s;
+      }
+
+      &:hover {
+
+        .slider-arrow-pic {
+          color: #ffffff;
+        }
+      }
+
+      &:active {
+
+        .slider-arrow-pic {
+          transform: scale(0.9);
+        }
+      }
+    }
+
+    &-phone {
+      padding: 30px 12px;
+      display: flex;
+      justify-content: space-between;
+
+      &-wrapper {
+        position: relative;
+      }
+
+      &-vertical {
+        position: relative;
+        left: -1px;
+        z-index: 1;
+        width: 218px;
+        height: 461px;
+        margin: 22px 0;
+        background-image: url("../../assets/images/phone.png");
+
+        &:hover {
+          .slider-phone-vertical-bcg {
+            background-position: 50% 50%;
+          }
+        }
+
+        &-bcg {
+          position: absolute;
+          top: 66px;
+          left: 16px;
+          width: 189px;
+          height: 333px;
+          border-radius: 1px;
+          background-image: url("../../assets/images/vertical-phone-bcg.png");
+          background-repeat: no-repeat;
+          background-position: -15px -135px;
+          transition: 0.5s;
+        }
+
+        &-shadow {
+          position: absolute;
+          left: 1px;
+          top: 24px;
+          width: 240px;
+          height: 483px;
+          transform: rotate(180deg);
+          background-image: url("../../assets/images/vertical-phone-shadow.png");
+          background-repeat: no-repeat;
+        }
+      }
+
+      &-horizontal {
+        position: relative;
+        top: -88px;
+        left: -36px;
+        z-index: 1;
+        width: 218px;
+        height: 461px;
+        transform: rotate(90deg);
+        transform-origin: 0 50%;
+        background-image: url("../../assets/images/phone.png");
+
+        &:hover {
+          .slider-phone-horizontal-bcg {
+            background-position: 50% 50%;
+          }
+        }
+
+        &-bcg {
+          position: absolute;
+          top: 138px;
+          left: -56px;
+          width: 333px;
+          height: 189px;
+          border-radius: 1px;
+          background-image: url("../../assets/images/horizontal-phone-bcg.png");
+          background-repeat: no-repeat;
+          background-position: -125px -119px;
+          transform: rotate(-90deg);
+          transition: 0.5s;
+        }
+
+        &-shadow {
+          position: absolute;
+          left: -264px;
+          top: 144px;
+          width: 483px;
+          height: 240px;
+          transform: rotate(180deg);
+          background-image: url("../../assets/images/horizontal-phone-shadow.png");
+          background-repeat: no-repeat;
+        }
+      }
+    }
+  }
+
+  .services {
+    padding: 68px 40px;
+
+    &-title {
+      padding-bottom: 14px;
+      font-family: "Lato Black", sans-serif;
+      font-size: 30px;
+      line-height: 19px;
+      color: #666d89;
+    }
+
+    &-info {
+      padding: 15px 0 48px;
+      font-size: 18px;
+      line-height: 28px;
+      color: #767e9e;
+      font-family: "Lato Light", sans-serif;
+    }
+
+    &-items {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-column-gap: 20px;
+      grid-row-gap: 33px;
+    }
+
+    &-item {
+      height: 90px;
+      padding-left: 80px;
+      background-repeat: no-repeat;
+      overflow: hidden;
+
+      &-title {
+        padding-bottom: 10px;
+        font-size: 18px;
+        line-height: 16px;
+        color: #666d89;
+        font-family: "Lato Black";
+        letter-spacing: -0.1px;
+      }
+
+      &-info {
+        font-size: 12px;
+        line-height: 22px;
+        color: #767e9e;
+        font-family: "Lato Regular", sans-serif;
+        text-align: justify;
+      }
+    }
+
+    .pen {
+      background-image: url("../../assets/images/service-pen.png");
+    }
+
+    .bulb {
+      background-image: url("../../assets/images/service-bulb.png");
+    }
+
+    .heart {
+      background-image: url("../../assets/images/service-heart.png");
+    }
+
+    .phone {
+      background-image: url("../../assets/images/service-phone.png");
+    }
+
+    .message {
+      background-image: url("../../assets/images/service-message.png");
+    }
+
+    .star {
+      background-image: url("../../assets/images/service-star.png");
+    }
+  }
+}
