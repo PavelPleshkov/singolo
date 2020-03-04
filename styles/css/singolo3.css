@@ -712,11 +712,12 @@ a {
   text-align: center;
   border: 1px solid #666d89;
   border-radius: 50%;
+  transition: 0.2s;
 }
 
 .footer-link:hover {
-  color: #000000;
-  border-color: #000000;
+  color: #ffffff;
+  border-color: #ffffff;
 }
 
 .footer-link:last-child {
