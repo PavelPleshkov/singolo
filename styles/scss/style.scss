@@ -47,14 +47,16 @@ a {
 }
 
 .header {
-  padding: 20px 40px;
+  padding: 19px 40px 21px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-family: "Lato Bold", sans-serif;
   text-transform: uppercase;
   color: #ffffff;
+  border-bottom: 6px solid #323746;
   background-color: #2d303a;
+  
 
   // &::after{
   //   clear: both;
@@ -62,10 +64,10 @@ a {
 
   &-logo {
     // float: left;
-    position: relative;
-    top: -2px;
+    // position: relative;
+    // top: -1px;
     font-size: 25px;
-    line-height: 1;
+    line-height: 24px;
     letter-spacing: -0.5px;
 
     &-star {
@@ -78,7 +80,7 @@ a {
     // width: 371px;
     // padding: 10px 0;
     position: relative;
-    top: 1px;
+    top: 5px;
     display: flex;
     justify-content: end;
     // justify-content: space-between;
@@ -86,11 +88,23 @@ a {
     // display: block;
 
     &-item {
-      margin-left: 30px;
+      margin-left: 13px;
       padding: 18px 0;
+      line-height: 14px;
       color: inherit;
       transition: 0.3s;
       letter-spacing: -0.2px;
+
+      // &::after {
+      //   content: ".";
+      //   position: absolute;
+      //   top: 2px;
+      //   left: 10px;
+      //   display: inline;
+      //   font-size: 22px;
+      //   line-height: 0;
+      //   color: #434750;
+      // }
 
       &:hover {
         transform: scale(1.15);
@@ -102,6 +116,18 @@ a {
         transform: scale(1);
         transition: 0s;
       }
+    }
+
+    &-dot {
+      // position: absolute;
+      // top: 2px;
+      // left: 10px;
+      display: block;
+      margin-top: 24px;
+      margin-left: 11px;
+      font-size: 22px;
+      line-height: 0;
+      color: #434750;
     }
 
     .active {
@@ -117,7 +143,7 @@ a {
     display: grid;
     grid-template-columns: 100px 1fr 100px;
     grid-template-rows: 600px;
-    border-bottom: 15px solid #ea676b;
+    border-bottom: 6px solid #ea676b;
     box-sizing: border-box;
     background-color: #f06c64;
     
@@ -173,7 +199,7 @@ a {
     }
 
     &-phone {
-      padding: 30px 12px;
+      padding: 29px 12px;
       display: flex;
       justify-content: space-between;
 
@@ -183,12 +209,13 @@ a {
 
       &-vertical {
         position: relative;
-        left: -1px;
+        left: -2px;
         z-index: 1;
-        width: 218px;
+        width: 220px;
         height: 461px;
         margin: 22px 0;
         background-image: url("../../assets/images/phone.png");
+        background-repeat: no-repeat;
 
         &:hover {
           .slider-phone-vertical-bcg {
@@ -200,18 +227,17 @@ a {
           position: absolute;
           top: 66px;
           left: 16px;
-          width: 189px;
+          width: 188px;
           height: 333px;
           border-radius: 1px;
           background-image: url("../../assets/images/vertical-phone-bcg.png");
           background-repeat: no-repeat;
-          background-position: -15px -135px;
+          background-position: -14px -135px;
           transition: 0.5s;
         }
 
         &-shadow {
           position: absolute;
-          left: 1px;
           top: 24px;
           width: 240px;
           height: 483px;
@@ -223,14 +249,15 @@ a {
 
       &-horizontal {
         position: relative;
-        top: -88px;
-        left: -36px;
+        top: -89px;
+        left: -35px;
         z-index: 1;
-        width: 218px;
+        width: 220px;
         height: 461px;
         transform: rotate(90deg);
         transform-origin: 0 50%;
         background-image: url("../../assets/images/phone.png");
+        background-repeat: no-repeat;
 
         &:hover {
           .slider-phone-horizontal-bcg {
@@ -241,9 +268,9 @@ a {
         &-bcg {
           position: absolute;
           top: 138px;
-          left: -56px;
+          left: -57px;
           width: 333px;
-          height: 189px;
+          height: 188px;
           border-radius: 1px;
           background-image: url("../../assets/images/horizontal-phone-bcg.png");
           background-repeat: no-repeat;
@@ -254,7 +281,7 @@ a {
 
         &-shadow {
           position: absolute;
-          left: -264px;
+          left: -263px;
           top: 144px;
           width: 483px;
           height: 240px;
@@ -267,27 +294,29 @@ a {
   }
 
   .services {
-    padding: 68px 40px;
+    padding: 68px 40px 68px;
 
     &-title {
-      padding-bottom: 14px;
+      margin-bottom: 27px;
       font-family: "Lato Black", sans-serif;
       font-size: 30px;
-      line-height: 19px;
+      line-height: 18px;
       color: #666d89;
+      letter-spacing: -0.2px;
     }
 
     &-info {
-      padding: 15px 0 48px;
+      // padding: 15px 0 46px;
+      margin-bottom: 45px;
       font-size: 18px;
-      line-height: 28px;
+      line-height: 31px;
       color: #767e9e;
       font-family: "Lato Light", sans-serif;
     }
 
     &-items {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: repeat(3, 1fr);
       grid-column-gap: 20px;
       grid-row-gap: 33px;
     }
@@ -299,7 +328,7 @@ a {
       overflow: hidden;
 
       &-title {
-        padding-bottom: 10px;
+        margin-bottom: 11px;
         font-size: 18px;
         line-height: 16px;
         color: #666d89;
@@ -342,22 +371,23 @@ a {
   }
 
   .portfolio {
-    padding: 69px 40px 66px;
+    padding: 68px 40px 66px;
     border-bottom: 6px solid #323746;
     background-color: #2d303a;
     box-sizing: border-box;
 
     &-title {
-      padding-bottom: 14px;
+      margin-bottom: 27px;
       font-size: 30px;
       line-height: 19px;
       color: #666d89;
       font-family: "Lato Black", sans-serif;
-      letter-spacing: -0.3px;
+      letter-spacing: -0.2px;
     }
 
     &-text {
-      padding: 14px 0 10px;
+      // padding: 14px 0 10px;
+      margin-bottom: 11px;
       font-size: 18px;
       line-height: 29px;
       color: #767e9e;
@@ -365,7 +395,7 @@ a {
     }
 
     &-categories {
-      padding-bottom: 19px;
+      margin-bottom: 19px;
 
       &-item {
         padding: 0 7px;
@@ -398,10 +428,12 @@ a {
 
     &-items {
       display: grid;
-      grid-template-columns: repeat(4, 221px);
+      grid-template-columns: repeat(4, 220px);
       // grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: repeat(3, 188px);
-      grid-gap: 19px;
+      grid-template-rows: repeat(3, 187px);
+      // grid-column-gap: 20px;
+      // grid-row-gap: 20px;
+      grid-gap: 20px;
       height: 602px;
       // overflow: hidden;
     }
@@ -456,7 +488,7 @@ a {
 
     &-item8 {
       background-image: url("../../assets/images/portfolio-image8.png");
-      background-position: -24px -31px;
+      background-position: -24px -32px;
     }
 
     &-item9 {
@@ -471,7 +503,7 @@ a {
 
     &-item11 {
       background-image: url("../../assets/images/portfolio-image11.png");
-      background-position: -144px -174px;
+      background-position: -144px -175px;
     }
 
     &-item12 {
@@ -481,12 +513,12 @@ a {
   }
 
   .about {
-    padding: 69px 40px 66px;
-    border-bottom: 7px solid #ffffff;
+    padding: 69px 40px 67px;
+    border-bottom: 6px solid #ffffff;
     background-color: #f2f2f2;
 
     &-title {
-      padding-bottom: 14px;
+      margin-bottom: 26px;
       font-size: 30px;
       line-height: 18px;
       color: #666d89;
@@ -495,7 +527,8 @@ a {
     }
 
     &-text {
-      padding: 12px 0 46px;
+      // padding: 12px 0 46px;
+      margin-bottom: 46px;
       font-size: 18px;
       line-height: 30px;
       color: #767e9e;
@@ -504,9 +537,9 @@ a {
 
     &-persons {
       display: grid;
-      grid-template-columns: repeat(3, 301px);
+      grid-template-columns: repeat(3, 300px);
       // grid-template-columns: repeat(3, 1fr);
-      grid-gap: 19px;
+      grid-gap: 20px;
     }
 
     &-person {
@@ -514,23 +547,44 @@ a {
 
       &-image {
         display: block;
-        // width: 301px;
-        // height: 301px;
+        width: 300px;
+        height: 300px;
+      }
+
+      &-1 {
+        .about-person-image {
+          background-image: url("../../assets/images/person1.png");
+        }
+      }
+
+      &-2 {
+        .about-person-image {
+          background-image: url("../../assets/images/person2.png");
+        }
+      }
+
+      &-3 {
+        .about-person-image {
+          background-image: url("../../assets/images/person3.png");
+        }
       }
 
       &-name {
-        height: 18px;
-        padding: 12px 0 14px;
+        height: 22px;
+        // padding: 12px 0 14px;
+        margin-top: 13px;
+        margin-left: -1px;
         font-size: 18px;
         line-height: 27px;
         color: #666d89;
         font-family: "Lato Black", sans-serif;
-        letter-spacing: -0.3px;
+        letter-spacing: -0.2px;
         overflow: hidden;
       }
 
       &-info {
-        padding-bottom: 15px;
+        // padding-bottom: 15px;
+        margin-top: 10px;
         font-size: 12px;
         line-height: 22px;
         color: #767e9e;
@@ -538,7 +592,7 @@ a {
       }
 
       &-links {
-        padding-top: 8px;
+        margin-top: 23px;
       }
 
       &-link {
@@ -568,7 +622,8 @@ a {
     border-bottom: 6px solid #ea676b;
 
     &-title {
-      padding-bottom: 14px;
+      // padding-bottom: 14px;
+      margin-bottom: 26px;
       font-size: 30px;
       line-height: 18px;
       color: #f0d8d9;
@@ -577,9 +632,10 @@ a {
     }
 
     &-text {
-      padding: 12px 0 46px;
+      // padding: 12px 0 46px;
+      margin-bottom: 44px;
       font-size: 18px;
-      line-height: 30px;
+      line-height: 31px;
       color: #f0d8d9;
       font-family: "Lato Light", sans-serif;
       text-align: justify;
@@ -661,7 +717,7 @@ a {
     &-info {
 
       &-title {
-        margin-bottom: 9px;
+        margin-bottom: 10px;
         font-size: 18px;
         line-height: 18px;
         color: #f0d8d9;
@@ -740,6 +796,10 @@ a {
     // color: #666d89;
     font-family: "Lato Regular", sans-serif;
     letter-spacing: -0.2px;
+  }
+
+  &-links {
+    margin-top: 1px;
   }
 
   &-link {
