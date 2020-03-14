@@ -233,7 +233,16 @@
             <input type="email" class="contact-form-item" name="email" placeholder="Email (Required)" id="userEmail" required>
             <input type="text" class="contact-form-item" name="subject" placeholder="Subject" id="userSubject">
             <textarea class="contact-form-item" name="description" placeholder="Describe your project in detail..." id="userDescription"></textarea>
-            <input type="submit" value="Send" class="contact-form-item">
+            <input type="submit" value="Send" class="contact-form-item" id="btnSend">
+            <div class="hidden" id="form-message-block">
+              <div id="message">
+                <p>Письмо отправлено</p>
+                <p id="message-subject">Без темы</p>
+                <p id="message-description">Без описания</p>
+                <button id="message-btn-close">X</button>
+              </div>
+              
+            </div>
           </form>
           <div class="contact-info">
             <h3 class="contact-info-title">

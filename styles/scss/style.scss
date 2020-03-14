@@ -685,11 +685,6 @@ a {
           color: #ffffff;
         }
 
-        &:last-child {
-          margin-bottom: 0;
-          // color: #f48c8f;
-        }
-
         &[name="description"] {
           height: 203px;
           resize: none;
@@ -699,6 +694,7 @@ a {
           width: auto;
           min-width: 100px;
           margin-left: auto;
+          margin-bottom: 0;
           border: 1px solid transparent;
           color: #f48c8f;
           text-transform: uppercase;
@@ -718,6 +714,49 @@ a {
         &::placeholder {
           color: #f48c8f;
         }
+      }
+
+      #form-message-block {
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(67, 71, 80, 0.5);
+        z-index: 5;
+
+        #message {
+          position: relative;
+          width: auto;
+          min-width: 300px;
+          max-width: 1020px;
+          padding: 30px;
+          margin: auto;
+          border: 2px solid #434750;
+          border-radius: 5px;
+          background-color: #f0d8d9;
+          text-align: left;
+
+          &-btn-close {
+            position: absolute;
+            top: -15px;
+            left: calc(100% - 15px);
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            color: #ffffff;
+            border: 2px solid #434750;
+            border-radius: 50%;
+            background-color: #434750;
+            text-align: center;
+            vertical-align: middle;
+          }
+        }
+      }
+
+      #form-message-block.hidden {
+        display: none;
       }
     }
 
