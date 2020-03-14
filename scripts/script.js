@@ -1,7 +1,6 @@
-const navItems = document.querySelectorAll('.header-navigation-item');
+const mainMenu = document.querySelector('#mainMenu');
 
-
-
-navItem.addEventListener('click', () => {
-  if (!document.q)
+mainMenu.addEventListener('click', (event) => {
+  mainMenu.querySelectorAll('.header-navigation-item').forEach(elem => elem.classList.remove('active'));
+  event.target.classList.add('active');
 });

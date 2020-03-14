@@ -77,16 +77,26 @@ a {
 }
 
 .header-navigation-item {
-  margin-left: 13px;
+  margin-left: 23px;
   padding: 18px 0;
   line-height: 14px;
   color: inherit;
   transition: 0.3s;
-  letter-spacing: -0.2px;
+  letter-spacing: -0.15px;
+}
+
+.header-navigation-item:not(:last-child)::after {
+  content: ".";
+  position: relative;
+  top: -2px;
+  left: 10px;
+  display: inline-block;
+  font-size: 22px;
+  line-height: 1px;
+  color: #434750;
 }
 
 .header-navigation-item:hover {
-  transform: scale(1.15);
   filter: drop-shadow(0 0 15px #ffffff);
   color: #f06c64;
 }
@@ -94,15 +104,6 @@ a {
 .header-navigation-item:active {
   transform: scale(1);
   transition: 0s;
-}
-
-.header-navigation-dot {
-  display: block;
-  margin-top: 24px;
-  margin-left: 11px;
-  font-size: 22px;
-  line-height: 0;
-  color: #434750;
 }
 
 .header-navigation .active {
@@ -643,6 +644,7 @@ a {
   margin-left: auto;
   border: 1px solid transparent;
   color: #f48c8f;
+  text-transform: uppercase;
 }
 
 .main .contact-form-item[type="submit"]:hover {
