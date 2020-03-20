@@ -23,6 +23,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   height: 100%;
@@ -47,7 +51,11 @@ a {
 }
 
 .header {
+  position: fixed;
+  z-index: 3;
+  box-sizing: border-box;
   padding: 19px 40px 21px;
+  width: inherit;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -137,6 +145,7 @@ a {
 }
 
 .main {
+  margin-top: 96px;
 
   .slider {
     height: 600px;
