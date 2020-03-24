@@ -39,6 +39,7 @@ body {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 .container {
@@ -70,10 +71,22 @@ a {
   font-size: 25px;
   line-height: 24px;
   letter-spacing: -0.5px;
+  transition: 0.7s;
+}
+
+.header-logo:hover {
+  color: #f06c64;
+  filter: drop-shadow(0 0 30px #000000) hue-rotate(-360deg);
+}
+
+.header-logo:hover .header-logo-star {
+  color: #ffffff;
+  filter: inherit;
 }
 
 .header-logo-star {
   color: #f06c64;
+  transition: 0.7s;
 }
 
 .header-navigation {
@@ -143,6 +156,7 @@ a {
   font-size: 27px;
   line-height: 1;
   color: #ca4549;
+  cursor: pointer;
   transition: 0.3s;
 }
 
