@@ -45,3 +45,9 @@ const btnCloseMessageBlock = document.querySelector('#message-btn-close');
 
 btnSend.addEventListener('click', () => messageBlock.classList.remove('hidden'));
 btnCloseMessageBlock.addEventListener('click', () => messageBlock.classList.add('hidden'));
+messageBlock.addEventListener('click', (event) => {
+  const message = document.querySelector('#message');
+  if (event.clientX < message.getBoundingClientRect().x || event.clientX > message.getBoundingClientRect().x + message.getBoundingClientRect().width || event.clientY < message.getBoundingClientRect().y || event.clientY > message.getBoundingClientRect().y + message.getBoundingClientRect().height) {
+    messageBlock.classList.add('hidden');
+  }
+})

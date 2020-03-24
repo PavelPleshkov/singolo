@@ -724,6 +724,11 @@ a {
   vertical-align: middle;
 }
 
+.main .contact-form #form-message-block #message-btn-close:active {
+  outline: none;
+  transform: scale(0.9);
+}
+
 .main .contact-form #form-message-block.hidden {
   display: none;
 }

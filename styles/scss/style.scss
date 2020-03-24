@@ -782,6 +782,11 @@ a {
             background-color: #434750;
             text-align: center;
             vertical-align: middle;
+
+            &:active {
+              outline: none;
+              transform: scale(0.9);
+            }
           }
         }
       }
